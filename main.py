@@ -43,7 +43,7 @@ def plot_usenixbefore(data: pd.DataFrame) -> None:
     ax.set(title='Have you used Nix Before?')
     ax.set(xlabel='Response')
     fig = ax.get_figure()
-    fig.savefig(Path('./usenixbefore.png'))
+    fig.savefig(Path('./post/usenixbefore.png'))
     fig.clf()
 
 
@@ -52,7 +52,7 @@ def plot_usenixhome(data: pd.DataFrame) -> None:
     ax.set(title='Do you use Nix at home?')
     ax.set(xlabel='Response')
     fig = ax.get_figure()
-    fig.savefig(Path('./usenixhome.png'))
+    fig.savefig(Path('./post/usenixhome.png'))
     fig.clf()
 
 
@@ -61,7 +61,7 @@ def plot_usenixwork(data: pd.DataFrame) -> None:
     ax.set(title='Do you use Nix at work?')
     ax.set(xlabel='Response')
     fig = ax.get_figure()
-    fig.savefig(Path('./usenixwork.png'))
+    fig.savefig(Path('./post/usenixwork.png'))
     fig.clf()
 
 
@@ -89,7 +89,7 @@ def plot_nixexp(data: pd.DataFrame) -> None:
     ax.tick_params(axis='x', rotation=45)
     ax.figure.tight_layout()
     fig = ax.get_figure()
-    fig.savefig(Path('./nixexp-heatmap.png'))
+    fig.savefig(Path('./post/nixexp-heatmap.png'))
     fig.clf()
 
 
@@ -100,7 +100,7 @@ def plot_contentlikertscale_001(data: pd.DataFrame) -> None:
     ax.yaxis.get_major_locator().set_params(integer=True)
     ax.figure.tight_layout()
     fig = ax.get_figure()
-    fig.savefig(Path('./contentlikertscale-001.png'))
+    fig.savefig(Path('./post/contentlikertscale-001.png'))
     fig.clf()
 
 
@@ -111,7 +111,7 @@ def plot_contentlikertscale_002(data: pd.DataFrame) -> None:
     ax.yaxis.get_major_locator().set_params(integer=True)
     ax.figure.tight_layout()
     fig = ax.get_figure()
-    fig.savefig(Path('./contentlikertscale-002.png'))
+    fig.savefig(Path('./post/contentlikertscale-002.png'))
     fig.clf()
 
 
@@ -122,7 +122,7 @@ def plot_contentlikertscale_003(data: pd.DataFrame) -> None:
     ax.yaxis.get_major_locator().set_params(integer=True)
     ax.figure.tight_layout()
     fig = ax.get_figure()
-    fig.savefig(Path('./contentlikertscale-003.png'))
+    fig.savefig(Path('./post/contentlikertscale-003.png'))
     fig.clf()
 
 
@@ -174,7 +174,7 @@ def plot_mostvaluablesession(data: pd.DataFrame) -> None:
     ax.set(ylabel='Counts')
     ax.figure.tight_layout()
     fig = ax.get_figure()
-    fig.savefig(Path('./mostvaluablesession.png'))
+    fig.savefig(Path('./post/mostvaluablesession.png'))
     fig.clf()
 
 
@@ -185,7 +185,7 @@ def plot_generallikertscale_001(data: pd.DataFrame) -> None:
     ax.yaxis.get_major_locator().set_params(integer=True)
     ax.figure.tight_layout()
     fig = ax.get_figure()
-    fig.savefig(Path('./generallikertscale-001.png'))
+    fig.savefig(Path('./post/generallikertscale-001.png'))
     fig.clf()
 
 
@@ -196,7 +196,7 @@ def plot_generallikertscale_002(data: pd.DataFrame) -> None:
     ax.yaxis.get_major_locator().set_params(integer=True)
     ax.figure.tight_layout()
     fig = ax.get_figure()
-    fig.savefig(Path('./generallikertscale-002.png'))
+    fig.savefig(Path('./post/generallikertscale-002.png'))
     fig.clf()
 
 
@@ -207,7 +207,7 @@ def plot_generallikertscale_003(data: pd.DataFrame) -> None:
     ax.yaxis.get_major_locator().set_params(integer=True)
     ax.figure.tight_layout()
     fig = ax.get_figure()
-    fig.savefig(Path('./generallikertscale-003.png'))
+    fig.savefig(Path('./post/generallikertscale-003.png'))
     fig.clf()
 
 
@@ -218,7 +218,7 @@ def plot_generallikertscale_004(data: pd.DataFrame) -> None:
     ax.yaxis.get_major_locator().set_params(integer=True)
     ax.figure.tight_layout()
     fig = ax.get_figure()
-    fig.savefig(Path('./generallikertscale-004.png'))
+    fig.savefig(Path('./post/generallikertscale-004.png'))
     fig.clf()
 
 
@@ -262,7 +262,7 @@ def plot_eventlikemost(data: pd.DataFrame) -> None:
     ax.set(ylabel='Counts')
     ax.figure.tight_layout()
     fig = ax.get_figure()
-    fig.savefig(Path('./eventlikemost.png'))
+    fig.savefig(Path('./post/eventlikemost.png'))
     fig.clf()
 
 
@@ -293,7 +293,7 @@ def plot_eventlikeleast() -> None:
     ax.set(ylabel='Counts')
     ax.figure.tight_layout()
     fig = ax.get_figure()
-    fig.savefig(Path('./eventlikeleast.png'))
+    fig.savefig(Path('./post/eventlikeleast.png'))
     fig.clf()
 
 
@@ -316,7 +316,7 @@ def plot_howhear() -> None:
     ax.set(ylabel='Counts')
     ax.figure.tight_layout()
     fig = ax.get_figure()
-    fig.savefig(Path('./howhear.png'))
+    fig.savefig(Path('./post/howhear.png'))
     fig.clf()
 
 
@@ -339,7 +339,7 @@ def plot_whyattend() -> None:
     ax.set(ylabel='Counts')
     ax.figure.tight_layout()
     fig = ax.get_figure()
-    fig.savefig(Path('./whyattend.png'))
+    fig.savefig(Path('./post/whyattend.png'))
     fig.clf()
 
 

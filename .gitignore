@@ -1,6 +1,3 @@
-# no image files from processing
-*.png
-
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
