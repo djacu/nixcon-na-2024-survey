@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "nnasp"
+version = "0.1.0"
+description = ""
+authors = ["Daniel Baker <daniel.n.baker@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pandas = "^2.2.1"
+matplotlib = "^3.8.4"
+numpy = "^1.26.4"
+tabulate = "^0.9.0"
+seaborn = "^0.13.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
