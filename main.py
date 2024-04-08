@@ -10,28 +10,28 @@ from tabulate import tabulate
 
 def main() -> None:
     data = ingest()
-    #plot_usenixbefore(data)
-    #plot_usenixhome(data)
-    #plot_usenixwork(data)
+    plot_usenixbefore(data)
+    plot_usenixhome(data)
+    plot_usenixwork(data)
 
-    #plot_nixexp(data)
+    plot_nixexp(data)
 
-    #plot_contentlikertscale_001(data)
-    #plot_contentlikertscale_002(data)
-    #plot_contentlikertscale_003(data)
+    plot_contentlikertscale_001(data)
+    plot_contentlikertscale_002(data)
+    plot_contentlikertscale_003(data)
 
-    #plot_mostvaluablesession(data)
+    plot_mostvaluablesession(data)
 
-    #plot_generallikertscale_001(data)
-    #plot_generallikertscale_002(data)
-    #plot_generallikertscale_003(data)
-    #plot_generallikertscale_004(data)
+    plot_generallikertscale_001(data)
+    plot_generallikertscale_002(data)
+    plot_generallikertscale_003(data)
+    plot_generallikertscale_004(data)
 
-    #plot_eventlikemost(data)
-    #plot_eventlikeleast()
+    plot_eventlikemost(data)
+    plot_eventlikeleast()
 
-    #plot_howhear()
-    #plot_whyattend()
+    plot_howhear()
+    plot_whyattend()
 
     
 def ingest() -> pd.DataFrame:
@@ -40,7 +40,8 @@ def ingest() -> pd.DataFrame:
 
 def plot_usenixbefore(data: pd.DataFrame) -> None:
     ax = sns.histplot(data['usenixbefore'])
-    ax.set(xlabel='Have you used Nix Before?')
+    ax.set(title='Have you used Nix Before?')
+    ax.set(xlabel='Response')
     fig = ax.get_figure()
     fig.savefig(Path('./usenixbefore.png'))
     fig.clf()
@@ -48,7 +49,8 @@ def plot_usenixbefore(data: pd.DataFrame) -> None:
 
 def plot_usenixhome(data: pd.DataFrame) -> None:
     ax = sns.histplot(data['usenixhome'])
-    ax.set(xlabel='Do you use Nix at home?')
+    ax.set(title='Do you use Nix at home?')
+    ax.set(xlabel='Response')
     fig = ax.get_figure()
     fig.savefig(Path('./usenixhome.png'))
     fig.clf()
@@ -56,7 +58,8 @@ def plot_usenixhome(data: pd.DataFrame) -> None:
 
 def plot_usenixwork(data: pd.DataFrame) -> None:
     ax = sns.histplot(data['usenixwork'])
-    ax.set(xlabel='Do you use Nix at work?')
+    ax.set(title='Do you use Nix at work?')
+    ax.set(xlabel='Response')
     fig = ax.get_figure()
     fig.savefig(Path('./usenixwork.png'))
     fig.clf()
@@ -92,8 +95,10 @@ def plot_nixexp(data: pd.DataFrame) -> None:
 
 def plot_contentlikertscale_001(data: pd.DataFrame) -> None:
     ax = sns.histplot(data['contentlikertscale[SQ001]'], discrete=True, binrange=(1, 5))
-    ax.set(xlabel='In your opinion, did the conference meet its objectives?')
-    ax.set(title='On a scale from 1 to 5.')
+    ax.set(title='In your opinion, did the conference meet its objectives?')
+    ax.set(xlabel='Scale of 1 (negative) to 5 (positive)')
+    ax.yaxis.get_major_locator().set_params(integer=True)
+    ax.figure.tight_layout()
     fig = ax.get_figure()
     fig.savefig(Path('./contentlikertscale-001.png'))
     fig.clf()
@@ -101,8 +106,10 @@ def plot_contentlikertscale_001(data: pd.DataFrame) -> None:
 
 def plot_contentlikertscale_002(data: pd.DataFrame) -> None:
     ax = sns.histplot(data['contentlikertscale[SQ002]'], discrete=True, binrange=(1, 5))
-    ax.set(xlabel='How well was the conference structured?')
-    ax.set(title='On a scale from 1 to 5.')
+    ax.set(title='How well was the conference structured?')
+    ax.set(xlabel='Scale of 1 (negative) to 5 (positive)')
+    ax.yaxis.get_major_locator().set_params(integer=True)
+    ax.figure.tight_layout()
     fig = ax.get_figure()
     fig.savefig(Path('./contentlikertscale-002.png'))
     fig.clf()
@@ -110,8 +117,10 @@ def plot_contentlikertscale_002(data: pd.DataFrame) -> None:
 
 def plot_contentlikertscale_003(data: pd.DataFrame) -> None:
     ax = sns.histplot(data['contentlikertscale[SQ003]'], discrete=True, binrange=(1, 5))
-    ax.set(xlabel='How satisfied are you with the variety of topics presented at the conference?')
-    ax.set(title='On a scale from 1 to 5.')
+    ax.set(title='How satisfied are you with the variety\nof topics presented at the conference?')
+    ax.set(xlabel='Scale of 1 (negative) to 5 (positive)')
+    ax.yaxis.get_major_locator().set_params(integer=True)
+    ax.figure.tight_layout()
     fig = ax.get_figure()
     fig.savefig(Path('./contentlikertscale-003.png'))
     fig.clf()
@@ -171,8 +180,10 @@ def plot_mostvaluablesession(data: pd.DataFrame) -> None:
 
 def plot_generallikertscale_001(data: pd.DataFrame) -> None:
     ax = sns.histplot(data['generallikertscale[SQ001]'], discrete=True, binrange=(1, 5))
-    ax.set(xlabel='How would you rate your overall experience at the event?')
-    ax.set(title='On a scale from 1 to 5.')
+    ax.set(title='How would you rate your overall experience at the event?')
+    ax.set(xlabel='Scale of 1 (negative) to 5 (positive)')
+    ax.yaxis.get_major_locator().set_params(integer=True)
+    ax.figure.tight_layout()
     fig = ax.get_figure()
     fig.savefig(Path('./generallikertscale-001.png'))
     fig.clf()
@@ -180,8 +191,10 @@ def plot_generallikertscale_001(data: pd.DataFrame) -> None:
 
 def plot_generallikertscale_002(data: pd.DataFrame) -> None:
     ax = sns.histplot(data['generallikertscale[SQ002]'], discrete=True, binrange=(1, 5))
-    ax.set(xlabel='How satisfied were you with the networking opportunities provided?')
-    ax.set(title='On a scale from 1 to 5.')
+    ax.set(title='How satisfied were you with the networking opportunities provided?')
+    ax.set(xlabel='Scale of 1 (negative) to 5 (positive)')
+    ax.yaxis.get_major_locator().set_params(integer=True)
+    ax.figure.tight_layout()
     fig = ax.get_figure()
     fig.savefig(Path('./generallikertscale-002.png'))
     fig.clf()
@@ -189,8 +202,10 @@ def plot_generallikertscale_002(data: pd.DataFrame) -> None:
 
 def plot_generallikertscale_003(data: pd.DataFrame) -> None:
     ax = sns.histplot(data['generallikertscale[SQ003]'], discrete=True, binrange=(1, 5))
-    ax.set(xlabel='How likely are you to recommend this event to a friend?')
-    ax.set(title='On a scale from 1 to 5.')
+    ax.set(title='How likely are you to recommend this event to a friend?')
+    ax.set(xlabel='Scale of 1 (negative) to 5 (positive)')
+    ax.yaxis.get_major_locator().set_params(integer=True)
+    ax.figure.tight_layout()
     fig = ax.get_figure()
     fig.savefig(Path('./generallikertscale-003.png'))
     fig.clf()
@@ -198,8 +213,10 @@ def plot_generallikertscale_003(data: pd.DataFrame) -> None:
 
 def plot_generallikertscale_004(data: pd.DataFrame) -> None:
     ax = sns.histplot(data['generallikertscale[SQ004]'], discrete=True, binrange=(1, 5))
-    ax.set(xlabel='Were you able to easily find all of the information you need about our event?')
-    ax.set(title='On a scale from 1 to 5.')
+    ax.set(title='Were you able to easily find all of the information you\nneed about our event?')
+    ax.set(xlabel='Scale of 1 (negative) to 5 (positive)')
+    ax.yaxis.get_major_locator().set_params(integer=True)
+    ax.figure.tight_layout()
     fig = ax.get_figure()
     fig.savefig(Path('./generallikertscale-004.png'))
     fig.clf()
